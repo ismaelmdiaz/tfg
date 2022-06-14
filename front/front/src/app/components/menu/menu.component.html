@@ -1,0 +1,79 @@
+  <nav class="menu-container">
+  
+    <!-- logo -->
+    <div routerLink="/" class="caja_logo">
+        <h1 class="logo plusJakartaSans" style="cursor:pointer">/dichotomy</h1>
+    </div>
+  
+    <!-- menu items -->
+    <div class="menu plusJakartaSans">
+      <ul>
+        <li>
+          <a routerLink="/">
+            Home
+          </a>
+        </li>
+        <li>
+          <a routerLink="/brands">
+            Brands
+          </a>
+          <!-- <div *ngIf="showBrands" class="brandsBox">
+            <p routerLink="/brands">Salomon</p>
+            <p routerLink="/">Arc-Teryx</p>
+          </div> -->
+        </li>
+        <li style="padding-right: 0px" *ngIf="isLogged==false">
+          <a routerLink="/login">
+            Login
+          </a>
+        </li>
+        <li *ngIf="isLogged==true">
+          <a routerLink="/carrito">
+            Ver carrito
+          </a>
+        </li>
+        <li *ngIf="isLogged==true">
+          <a (click)="onLogout()">
+            Cerrar sesión
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- burger menu -->
+  <div class="desplegable">
+    <i class="fa-solid fa-bars" (click)="ocultarMenu()"></i>
+
+    <div *ngIf="mostrar==true" class="despliegue">
+      <div class="barra-responsive familyVietnam">
+        <p>nombreusuario</p>
+        <p>carrito</p>
+      </div>
+      <div class="caja-boton-cerrar" id="caja-boton-cerrar">
+        <div class="circulo-boton" (click)="ocultarMenu()"> 
+          <i class="icono-cierre fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <div class="caja-menu">
+        <ul class="familyVietnam">
+          <li>
+            <a routerLink="/">Home</a>
+          </li>
+          <li>
+            <a routerLink="/brands">Brands</a>
+          </li>
+          <li style="padding-right: 0px " *ngIf="isLogged==false">
+            <a routerLink="/login">Login</a>
+          </li>
+          <li *ngIf="isLogged==true">
+            <a routerLink="/carrito">Ver carrito</a>
+          </li>
+          <li *ngIf="isLogged==true">
+            <a (click)="onLogout()">Cerrar sesión</a>
+          </li>
+        </ul>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>

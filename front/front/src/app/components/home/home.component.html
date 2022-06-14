@@ -1,0 +1,12 @@
+<app-menu></app-menu>
+<div *ngFor="let item of homeProductsImages; let i=index" 
+     class="portada_producto"
+     [ngClass]="i==3 || i==0?'pantallaCompleta':''">
+    <img routerLink={{item.linkTo}}
+         src={{item.focus}}>
+    <button *ngIf="i!=0 && i!=3" 
+            class="boton_enlace"
+            routerLink={{item.linkTo}}>See more</button>
+</div>
+<app-footer></app-footer>
+

@@ -1,0 +1,20 @@
+<app-menu></app-menu>
+
+<div class="envoltorio">
+  <div class="mostrado_productos">
+      <div (click)="obtencionProducto(producto.id)" 
+           [routerLink]="['/product', producto.id]" 
+           class="producto" 
+           *ngFor="let producto of listadoProductos; let indice=index">
+        <div class="imagen">
+          <img src={{producto.images0}}>
+        </div>
+        <div class="detalles_producto">
+          <p class="familyVietnam">{{producto.model}}</p>
+          <p class="plusJakartaSans">{{producto.price}}.0€</p>
+        </div>
+      </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

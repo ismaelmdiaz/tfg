@@ -1,0 +1,66 @@
+.mostrado_productos {
+    display: flex;
+    /* border: 1px solid black; */
+    width: 191vh;
+    margin: 10vh;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.producto img {
+    width: 100%;
+}
+
+.producto {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 52vh;
+    height: 67vh;
+    margin: 3vh;
+}
+
+.detalles_producto {
+    /* border: 1px solid black; */
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* .detalles_producto p {
+    margin: 1vh;
+} */
+
+.detalles_producto button {
+    margin: 1vh;
+}
+
+.general {
+    width: 60vh;
+    /* border: 1px solid black; */
+}
+
+.envoltorio {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+}
+
+.imagen {
+    /* background-color: rgb(213, 213, 213); */
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+}
+
+.familyVietnam {
+    font-family: Be Vietnam Pro;
+}
+
+.plusJakartaSans {
+    font-family: Plus Jakarta Sans;
+}

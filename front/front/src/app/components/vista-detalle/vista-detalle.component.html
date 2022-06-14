@@ -1,0 +1,55 @@
+<app-menu></app-menu>
+
+<div class="envoltorio">
+  <div class="producto_1">
+    <div class="imagen">
+      <img src="{{producto.images0}}">
+    </div>
+  </div>
+  <div class="producto_2">
+    <div class="nombre_producto">
+      <h1 class="plusJakartaSans">{{producto.model}}</h1>
+      <p class="plusJakartaSans">Code: {{producto.id}}</p>
+    </div>
+    <div class="descripcion">
+      <p class="plusJakartaSans">{{producto.descriptionproduct1}}</p>
+    </div>
+    <div class="precio_producto">
+      <h2 class="plusJakartaSans">{{producto.price | number: '1.2-2'}} EUR</h2>
+    </div>
+
+    <div *ngIf="showAlertToSelectSize" class="mustSelectSize plusJakartaSans">
+      <p>You must select a size</p>
+    </div>
+    <div (click)="showSizesTablesBox()" 
+         class="plusJakartaSans seleccion"
+         [ngClass]="{'changeBorderColor':showAlertToSelectSize}">
+      <span>{{sizeSelectedClicked}}</span>
+      <i class="fa-solid fa-angle-down"></i>
+    </div>
+    <div *ngIf="showSizesBox" 
+         class="plusJakartaSans tallasZapatillas"
+         >
+      <div 
+        *ngFor="let item of items" 
+        class="talla"
+        (click)="sizeSelected(item)"
+      >
+      {{item}}
+      </div>
+    </div>
+    <div class="materials plusJakartaSans">
+      <h1>Materials</h1>
+      <p>{{producto.materials}}</p>
+    </div>
+    <div *ngIf="registeredProductoNotToAdd" class="productoAnyadido plusJakartaSans">
+      <p style="color: red;">This product is already added to Cart.</p>
+    </div>
+    <div (click)="onObtenerProducto(producto.id)" class="cesta plusJakartaSans">
+      <span>Add To Cart</span>
+      <i class="fa-solid fa-basket-shopping"></i>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

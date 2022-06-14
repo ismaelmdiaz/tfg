@@ -1,0 +1,16 @@
+.footer_general {
+    background-color: black;
+    color: white;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.familyVietnam {
+    font-family: Be Vietnam Pro;
+}
+
+.plusJakartaSans {
+    font-family: Plus Jakarta Sans;
+}

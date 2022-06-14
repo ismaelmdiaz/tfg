@@ -1,0 +1,29 @@
+<app-menu></app-menu>
+
+<h1 *ngIf="cestaUsuario.length>=1; else cestavacia" style="text-align: center" class="plusJakartaSans">
+    Basket.
+</h1>
+
+<ng-template #cestavacia>
+    <h1 style="text-align: center" class="plusJakartaSans">Empty basket.</h1>
+</ng-template>
+
+<div class="envoltorio">
+    <div class="mostrado_productos">
+        <div 
+            class="producto" 
+            *ngFor="let item of cestaUsuario; let indice=index">
+          <div class="imagen">
+            <img 
+                (click)="obtencionProducto(item.id)" 
+                [routerLink]="['/product', item.id]"
+                src={{item.images0}}>
+          </div>
+          <div class="detalles_producto">
+            <p class="familyVietnam">{{item.model}}</p>
+            <p class="plusJakartaSans">{{item.price}}.0€</p>
+            <button (click)="eliminarElementoCarrito(indice)">Eliminar</button>
+          </div>
+        </div>
+    </div>
+  </div>

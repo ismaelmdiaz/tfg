@@ -1,0 +1,49 @@
+<app-menu></app-menu>
+
+<div *ngIf="isLogged==true; else notLogged">
+    <h1>Actualmente, la sesión está iniciada</h1>
+</div>
+
+<ng-template #notLogged>
+    <div class="container">
+
+        <form #f="ngForm" (ngSubmit)="onRegister()" novalidate>
+
+            <label for="nombre">Nombre</label>
+            <input  type="text" 
+                    name="nombre" 
+                    id="nombre" 
+                    [(ngModel)]="nombre" required>
+
+            <label for="nombreUsuario">Nombre de usuario</label>
+            <input  type="text" 
+                    name="nombreUsuario" 
+                    id="nombreUsuario" 
+                    [(ngModel)]="nombreUsuario" required>
+
+            <label for="email">Email</label>
+            <input  type="text" 
+                    name="email" 
+                    id="email" 
+                    [(ngModel)]="email" required>
+
+            <label for="password">Password</label>
+            <input  type="text" 
+                    name="password" 
+                    id="password" 
+                    [(ngModel)]="password" required>
+
+            <button [disabled]="f.valid==false">Registro</button>
+
+        </form>
+
+        <ul>
+            <li>
+                <a routerLink="/login">Inicio sesión</a>
+            </li>
+            <li>
+                <a routerLink="/registration">Registro</a>
+            </li>
+        </ul>
+    </div>
+</ng-template>

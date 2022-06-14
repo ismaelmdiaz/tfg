@@ -1,0 +1,190 @@
+.envoltorio {
+    /* border: 1px solid black; */
+    display: flex;
+    height: 100vh;
+    padding: 9vh;
+    padding-top: 0vh;
+}
+
+/* mobile styles */
+/* @media only screen and (max-width: 901px) {
+
+    .envoltorio {
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+} */
+
+.producto_1 {
+    /* border: 1px solid black; */
+    width: 70%;
+}
+
+.imagen {
+    /* border: 1px solid black; */
+    height: 79vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.imagen img {
+    width: 100%;
+}
+
+.imagenes {
+    /* border: 1px solid black; */
+    height: 33vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* esa width no puede aumentar más, a partir de 33vh se queda inmóvil */
+.i1 {
+    /* border: 1px solid black; */
+    width: 39vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.i1 img {
+    width: 100%;
+}
+
+
+.descripcion {
+    /* border: 1px solid black; */
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    /* margin-top: 2vh; */
+}
+
+.descripcion p {
+    text-align: left;
+    font-size: 2vh;
+}
+
+.producto_2 {
+    /* border: 1px solid black; */
+    width: 30%;
+    padding-left: 18vh;
+}
+
+.nombre_producto {
+    display: flex;
+    align-items: right;
+    flex-direction: column;
+}
+
+.nombre_producto p {
+    font-size: 2vh;
+}
+
+.familyVietnam {
+    font-family: Be Vietnam Pro;
+}
+
+.plusJakartaSans {
+    font-family: Plus Jakarta Sans;
+}
+
+.seleccion {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    cursor: pointer;
+    padding-left: 1vh;
+    padding-right: 1vh;
+}
+
+.seleccion i {
+    display: flex;
+    align-items: center;
+}
+
+.seleccion span {
+    font-size: 2vh;
+}
+
+.tallasZapatillas {
+    height: 32vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #c4c4c4;
+    border-left: 1px solid #c4c4c4;
+    border-right: 1px solid #c4c4c4;
+    margin-top: 2vh;
+}
+
+.talla {
+    height: 5vh;
+    /* border: 1px solid black; */
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 2vh;
+}
+
+.materials {
+    height: 15vh;
+    margin-top: 5vh;
+}
+
+.materials h1 {
+    font-size: 2vh;
+}
+
+.materials p {
+    margin-top: 2vh;
+    font-size: 2vh;
+}
+
+.precio_producto {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 2vh;
+}
+
+.precio_producto h2 {
+    font-size: 2vh;
+}
+
+.cesta {
+    /* border: 1px solid white; */
+    margin-top: 4vh;
+    height: 9vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4vh;
+    cursor: pointer;
+}
+
+.cesta span {
+    margin-right: 2vh;
+}
+
+.talla:hover {
+    cursor: pointer;
+    background-color: rgb(210, 210, 210);
+}
+
+.changeBorderColor {
+    border-color: red;
+}
+
+.mustSelectSize {
+    margin-top: 4vh;
+}

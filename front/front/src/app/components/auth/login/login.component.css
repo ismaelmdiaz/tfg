@@ -1,0 +1,42 @@
+.container {
+    height: 50vh;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+label {
+    margin-top: 3vh;
+}
+
+input {
+    margin-top: 3vh;
+}
+
+button {
+    margin-top: 3vh;
+}
+
+.familyVietnam {
+    font-family: Be Vietnam Pro;
+}
+
+.plusJakartaSans {
+    font-family: Plus Jakarta Sans;
+}
+
+.fail {
+    margin-top: 2vh;
+}
+
+button {
+    height: 5vh;
+    cursor: pointer;
+}

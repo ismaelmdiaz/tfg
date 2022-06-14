@@ -1,0 +1,38 @@
+<app-menu></app-menu>
+
+<div *ngIf="isLogged==true; else notLogged">
+    <h1>Actualmente, la sesión está iniciada</h1>
+</div>
+
+<ng-template #notLogged>
+    <div class="container">
+
+        <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+
+            <h1 class="familyVietnam">Login.</h1>
+
+            <label class="plusJakartaSans" for="nombreUsuario">Username</label>
+            <input  type="text" 
+                    name="nombreUsuario" 
+                    id="nombreUsuario" 
+                    [(ngModel)]="nombreUsuario" required
+                    class="plusJakartaSans">
+
+            <label class="plusJakartaSans" for="password">Password</label>
+            <input  type="password" 
+                    name="password" 
+                    id="password" 
+                    [(ngModel)]="password" required
+                    class="plusJakartaSans">
+
+            <button class="plusJakartaSans" [disabled]="f.valid==false">Send</button>
+
+            <div class="fail familyVietnam" *ngIf="f.submitted==true && isLoginFail==true">
+                <p style="color:red">Incorrect username or password</p>
+            </div>
+
+        </form>
+        
+        
+    </div>
+</ng-template>
